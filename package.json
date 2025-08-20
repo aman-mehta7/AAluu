@@ -1,9 +1,11 @@
 {
-  "name": "sam",
+  "homepage": "https://aman-mehta7.github.io/lenis",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
@@ -14,6 +16,7 @@
     "@react-three/drei": "^10.7.3",
     "@react-three/fiber": "^9.3.0",
     "@tailwindcss/vite": "^4.1.12",
+    "gh-pages": "^6.3.0",
     "lamina": "^1.2.2",
     "motion": "^12.23.12",
     "react": "^19.1.1",
