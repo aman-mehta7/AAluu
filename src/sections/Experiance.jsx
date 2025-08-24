@@ -8,7 +8,7 @@ import Clod from "../components/Clod";
 import Batman from "../three/Batman";
 import Car from "../three/Car";
 import Bloon from "../three/Bloon";
-import { Text, Billboard } from "@react-three/drei"
+import { Text} from "@react-three/drei"
 import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 
@@ -40,7 +40,7 @@ const Experiance = () => {
       </group>
       <group position={[0, -0.2, 1]}>
          <Text color="white" fontSize={0.1}>
-          Don't cry 
+          Don't cry SAM 😂
         </Text>
       </group>
       <group position={[0, 0, 1]}>
@@ -50,12 +50,17 @@ const Experiance = () => {
       </group>
       <group position={[-3, 30, -100]}>
          <Text color="white" fontSize={5}>
-          HAHAHAHAH!!
+          HAHAHAHAH !!
         </Text>
       </group>
-      <group position={[-90, 30, -150]}>
+      <group position={[-3, 25, -100]}>
          <Text color="white" fontSize={2}>
-          right click and move to explore
+          just wanna say
+        </Text>
+      </group>
+      <group position={[-80, 30, -150]}>
+         <Text color="white" fontSize={2}>
+          left click and move your mouse to explore!
         </Text>
       </group>
 
