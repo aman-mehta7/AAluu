@@ -35,12 +35,12 @@ const Experiance = () => {
 
       <group position={[0, 0.2, 1]}>
          <Text color="white" fontSize={0.1}> 
-          😊
+          😘
         </Text>
       </group>
       <group position={[0, -0.2, 1]}>
          <Text color="white" fontSize={0.1}>
-          Don't cry SAM 😂
+          Don't cry 😂
         </Text>
       </group>
       <group position={[0, 0, 1]}>
