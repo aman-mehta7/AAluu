@@ -45,7 +45,7 @@ const Experiance = () => {
 
       <group position={[0, 0.2, 1]}>
         <Text color="white" fontSize={0.1}>
-          😘
+          🥰
         </Text>
       </group>
       <group
@@ -54,7 +54,7 @@ const Experiance = () => {
         rotation-y={Math.PI / 1}
       >
         <Text color="white" fontSize={0.1}>
-          how is the gift mayalu!! you like it? 😂
+          how's the gift my love!! you like it? 😂
         </Text>
       </group>
 
