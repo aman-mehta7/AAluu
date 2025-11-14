@@ -8,19 +8,29 @@ import Clod from "../components/Clod";
 import Batman from "../three/Batman";
 import Car from "../three/Car";
 import Bloon from "../three/Bloon";
-import { Text} from "@react-three/drei"
+import { Text } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
+import { useForm} from '@formspree/react';
+
 
 
 const Experiance = () => {
-    const textRef = useRef()
+  const textRef = useRef();
 
+  
   useFrame(({ clock }) => {
-    const t = clock.getElapsedTime()
+    const t = clock.getElapsedTime();
     // cycle through rainbow colors
-    textRef.current.color = new THREE.Color(`hsl(${(t * 50) % 360}, 100%, 50%)`)
-  })
+    textRef.current.color = new THREE.Color(
+      `hsl(${(t * 50) % 360}, 100%, 50%)`
+    );
+  });
+  
+    const [state, handleSubmit] = useForm("xkgkoynl");
+    if (state.succeeded) {
+      return <p>Thanks for joining!</p>;
+    }
   return (
     <>
       <PerspectiveCamera makeDefault position={[0, 0.2, 0]} fov={60} />
@@ -34,55 +44,116 @@ const Experiance = () => {
       <Background />
 
       <group position={[0, 0.2, 1]}>
-         <Text color="white" fontSize={0.1}> 
+        <Text color="white" fontSize={0.1}>
           😘
         </Text>
       </group>
-      <group position={[0, -0.2, 1]}>
-         <Text color="white" fontSize={0.1}>
-          Don't cry 😂
+      <group
+        position={[0, -0.2, 1]}
+        rotation-x={Math.PI / 4}
+        rotation-y={Math.PI / 1}
+      >
+        <Text color="white" fontSize={0.1}>
+          how is the gift mayalu!! you like it? 😂
         </Text>
       </group>
+
+
+
+<group position={[0.3, -0.3, 1]}>
+ <Html distanceFactor={1.5}>
+  {state.succeeded ? (
+    <div
+      style={{
+        background: "black",
+        padding: "1rem",
+        borderRadius: "10px",
+        color: "white",
+        textAlign: "center",
+      }}
+    >
+      Thanks for joining!
+    </div>
+  ) : (
+    <form
+      onSubmit={(e) => handleSubmit(e).then(() => alert("Hmmmm. I seeee 👀!"))}
+      style={{
+        background: "black",
+        padding: "1rem",
+        borderRadius: "10px",
+        display: "flex",
+        flexDirection: "column",
+        width: "20vw",
+      }}
+    >
+      <label htmlFor="fb">Feedback:</label>
+      <textarea
+        id="fb"
+        name="feedback"
+        rows={3}
+        placeholder="say what you wanna say..."
+        style={{ margin: "0.5rem 0", resize: "none" }}
+        required
+      />
+      <button
+        type="submit"
+        disabled={state.submitting}
+        style={{
+          background: "black",
+          color: "white",
+          border: "1px solid white",
+          borderRadius: "5px",
+        }}
+      >
+        Send
+      </button>
+    </form>
+  )}
+</Html>
+</group>
+
+
+
       <group position={[0, 0, 1]}>
-         <Text color="white" fontSize={0.1}>
+        <Text color="white" fontSize={0.1}>
           ❤️❤️❤️🖕❤️❤️❤️
         </Text>
       </group>
-      <group position={[-3, 30, -100]}>
+      {/* <group position={[-3, 30, -100]}>
          <Text color="white" fontSize={5}>
           HAHAHAHAH !!
         </Text>
-      </group>
+      </group> */}
       <group position={[-3, 25, -100]}>
-         <Text color="white" fontSize={2}>
-          just wanna say
+        <Text color="white" fontSize={5}>
+          Surprise🎉🎉🎉
         </Text>
       </group>
       <group position={[-80, 30, -150]}>
-         <Text color="white" fontSize={2}>
-          left click and move your mouse to explore!
+        <Text color="white" fontSize={3}>
+          turn around...
         </Text>
       </group>
 
       <group position={[15, 5, -100]}>
-         <Text color="white" fontSize={5}>
+        <Text color="white" fontSize={5}>
           YOU
         </Text>
       </group>
-      <group position={[25, -5, -100]}>
+      {/* <group position={[25, -5, -100]}>
          <Text color="white" fontSize={5}>
           Again😂😂...
         </Text>
+      </group> */}
+      <group position={[-15, 5, -100]}>
+        <Text color="white" fontSize={5} ref={textRef}>
+          F*CK
+        </Text>
       </group>
-        <group position={[-15, 5, -100]}>
-          <Text color="white" fontSize={5} ref={textRef}>
-            FUCK
-          </Text>
-        </group>
       <group rotation-y={Math.PI / 3} position={[0, 5, -100]}>
         <Midfing />
       </group>
-      <group position={[0.1, 0, 0]}>
+      <group position={[1, 0, 0]}>
         <Clod />
       </group>
       <group rotation-y={Math.PI / -1} position={[0.3, -0.5, 1]}>
