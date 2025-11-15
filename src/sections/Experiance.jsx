@@ -83,7 +83,8 @@ const Experiance = () => {
         borderRadius: "10px",
         display: "flex",
         flexDirection: "column",
-        width: "20vw",
+        minWidth: "20vw",
+        
       }}
     >
       <label htmlFor="fb">Feedback:</label>
@@ -91,7 +92,7 @@ const Experiance = () => {
         id="fb"
         name="feedback"
         rows={3}
-        placeholder="say what you wanna say..."
+        placeholder="Be Nice..."
         style={{ margin: "0.5rem 0", resize: "none" }}
         required
       />
