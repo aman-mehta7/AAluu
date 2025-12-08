@@ -14,7 +14,7 @@ import * as THREE from "three";
 import { useForm} from '@formspree/react';
 
 
-
+  
 const Experiance = () => {
   const textRef = useRef();
 
@@ -43,20 +43,20 @@ const Experiance = () => {
 
       <Background />
 
-      <group position={[0, 0.2, 1]}>
+      {/* <group position={[0, 0.2, 1]}>
         <Text color="white" fontSize={0.1}>
           🥰
         </Text>
-      </group>
-      <group
+      </group> */}
+      {/* <group
         position={[0, -0.2, 1]}
         rotation-x={Math.PI / 4}
         rotation-y={Math.PI / 1}
       >
         <Text color="white" fontSize={0.1}>
-          how's the gift my love!! you like it? 😂
+          🥰
         </Text>
-      </group>
+      </group> */}
 
 
 
@@ -76,7 +76,7 @@ const Experiance = () => {
     </div>
   ) : (
     <form
-      onSubmit={(e) => handleSubmit(e).then(() => alert("Hmmmm. I seeee 👀!"))}
+      onSubmit={(e) => handleSubmit(e).then(() => alert("Thank you!"))}
       style={{
         background: "black",
         padding: "1rem",
@@ -92,7 +92,7 @@ const Experiance = () => {
         id="fb"
         name="feedback"
         rows={3}
-        placeholder="Be Nice..."
+        placeholder="feedback"
         style={{ margin: "0.5rem 0", resize: "none" }}
         required
       />
@@ -117,7 +117,7 @@ const Experiance = () => {
 
       <group position={[0, 0, 1]}>
         <Text color="white" fontSize={0.1}>
-          ❤️❤️❤️🖕❤️❤️❤️
+          ❤️❤️❤️
         </Text>
       </group>
       {/* <group position={[-3, 30, -100]}>
@@ -126,8 +126,8 @@ const Experiance = () => {
         </Text>
       </group> */}
       <group position={[-3, 25, -100]}>
-        <Text color="white" fontSize={5}>
-          Surprise🎉🎉🎉
+        <Text color="white" fontSize={5}  ref={textRef}>
+          welcome to a demo 3d website🎉🎉🎉
         </Text>
       </group>
       <group position={[-80, 30, -150]}>
@@ -136,31 +136,31 @@ const Experiance = () => {
         </Text>
       </group>
 
-      <group position={[15, 5, -100]}>
+      {/* <group position={[15, 5, -100]}>
         <Text color="white" fontSize={5}>
           YOU
         </Text>
-      </group>
+      </group> */}
       {/* <group position={[25, -5, -100]}>
          <Text color="white" fontSize={5}>
           Again😂😂...
         </Text>
       </group> */}
-      <group position={[-15, 5, -100]}>
+      {/* <group position={[-15, 5, -100]}>
         <Text color="white" fontSize={5} ref={textRef}>
           F*CK
         </Text>
-      </group>
-      <group rotation-y={Math.PI / 3} position={[0, 5, -100]}>
+      </group> */}
+      {/* <group rotation-y={Math.PI / 3} position={[0, 5, -100]}>
         <Midfing />
-      </group>
+      </group> */}
       <group position={[1, 0, 0]}>
         <Clod />
       </group>
       <group rotation-y={Math.PI / -1} position={[0.3, -0.5, 1]}>
         <CaveHouse />
       </group>
-      <group scale={0.03} rotation-y={Math.PI / 3} position={[-2, -0.3, -1]}>
+      {/* <group scale={0.03} rotation-y={Math.PI / 3} position={[-2, -0.3, -1]}>
         <Batman />
       </group>
       <group
@@ -173,7 +173,7 @@ const Experiance = () => {
       </group>
       <group scale={0.01} rotation-y={Math.PI / 1.5} position={[-1, -0.3, 1]}>
         <Batman />
-      </group>
+      </group> */}
 
       <group position={[-1.1, -0.5, -1]} rotation-y={Math.PI / 5} scale={0.25}>
         <Car />
